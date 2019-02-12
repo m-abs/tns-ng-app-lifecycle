@@ -14,7 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     public ngOnInit() {
-        console.log(`${this.componentName}<${this.instance}>.ngOnDestroy()`);
+        console.log(`${this.componentName}<${this.instance}>.ngOnInit()`);
     }
 
     public ngOnDestroy() {

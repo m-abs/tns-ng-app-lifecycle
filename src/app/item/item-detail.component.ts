@@ -28,7 +28,7 @@ export class ItemDetailComponent implements OnInit {
         const id = +this.route.snapshot.params.id;
         this.item = this.itemService.getItem(id);
 
-        console.log(`${this.componentName}<${this.instance}>.ngOnDestroy()`);
+        console.log(`${this.componentName}<${this.instance}>.ngOnInit()`);
     }
 
     public ngOnDestroy() {

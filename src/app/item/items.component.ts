@@ -25,7 +25,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.items = this.itemService.getItems();
-        console.log(`${this.componentName}<${this.instance}>.ngOnDestroy()`);
+        console.log(`${this.componentName}<${this.instance}>.ngOnInit()`);
     }
 
     public ngOnDestroy() {
