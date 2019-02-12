@@ -1,0 +1,15 @@
+--- node_modules/nativescript-angular/platform-common.js.orig	2019-02-11 22:05:30.572696134 +0100
++++ node_modules/nativescript-angular/platform-common.js	2019-02-11 22:05:46.408709276 +0100
+@@ -185,6 +185,12 @@ var NativeScriptPlatformRef = /** @class
+         });
+         application_1.on(application_1.launchEvent, launchCallback);
+         application_1.run();
++        application_1.on(application_1.exitEvent, function() {
++            var lastModuleRef = lastBootstrappedModule ? lastBootstrappedModule.get() : null;
++            if (lastModuleRef) {
++                lastModuleRef.destroy();
++            }
++        });
+     };
+     NativeScriptPlatformRef.prototype._livesync = function () {
+         var _this = this;
