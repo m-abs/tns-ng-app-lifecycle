@@ -81,3 +81,6 @@ typings/
 
 platforms
 hooks
+report
+android-publish.*
+*.js

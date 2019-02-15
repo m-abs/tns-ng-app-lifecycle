@@ -1,3 +1,22 @@
+
+import * as ngTrace from "nativescript-angular/trace";
+import * as trace from "tns-core-modules/trace";
+
+trace.enable();
+trace.addCategories(
+  [
+    // ngTrace.animationsTraceCategory,
+    // ngTrace.bootstrapCategory,
+    // ngTrace.listViewTraceCategory,
+    ngTrace.rendererTraceCategory,
+    // ngTrace.routeReuseStrategyTraceCategory,
+    ngTrace.routerTraceCategory,
+    ngTrace.viewUtilCategory,
+    // trace.categories.All
+  ].join(",")
+
+);
+
 // this import should be first in order to load some required settings (like globals and reflect-metadata)
 import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 
